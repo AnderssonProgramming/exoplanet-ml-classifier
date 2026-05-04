@@ -9,11 +9,13 @@ No other logic lives in this module.
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# Paths
+# Paths (anchored to the project root so notebooks and scripts share output)
 # ---------------------------------------------------------------------------
-RAW_DATA_PATH = Path("data/raw/cumulative_koi.csv")
-PROCESSED_DATA_PATH = Path("data/processed/koi_processed.csv")
-FIGURES_PATH = Path("reports/figures/")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+RAW_DATA_PATH = PROJECT_ROOT / "data/raw/cumulative_koi.csv"
+PROCESSED_DATA_PATH = PROJECT_ROOT / "data/processed/koi_processed.csv"
+FIGURES_PATH = PROJECT_ROOT / "reports/figures/"
+MODELS_PATH = PROJECT_ROOT / "models/"
 
 # ---------------------------------------------------------------------------
 # Reproducibility
@@ -68,44 +70,35 @@ VALIDATION_SIZE = 0.1  # fraction of the remaining train set
 # Model hyperparameter grids for GridSearchCV
 # ---------------------------------------------------------------------------
 LR_PARAM_GRID = {
-    "C": [0.01, 0.1, 1.0, 10.0],
-    "penalty": ["l1", "l2"],
-    "solver": ["liblinear", "saga"],
+    "C": [0.1, 1.0, 10.0],
+    "penalty": ["l2"],
+    "solver": ["lbfgs"],
 }
 
 KNN_PARAM_GRID = {
-    "n_neighbors": [3, 5, 7, 11, 15],
+    "n_neighbors": [5, 11, 21],
     "weights": ["uniform", "distance"],
-    "metric": ["euclidean", "manhattan"],
 }
 
 RF_PARAM_GRID = {
-    "n_estimators": [100, 200, 400],
-    "max_depth": [None, 5, 10, 20],
-    "min_samples_split": [2, 5, 10],
-    "class_weight": ["balanced", None],
+    "n_estimators": [200, 400],
+    "max_depth": [None, 10, 20],
+    "min_samples_split": [2, 5],
 }
 
 XGB_PARAM_GRID = {
-    "n_estimators": [100, 200, 400],
+    "n_estimators": [200, 400],
     "max_depth": [3, 5, 7],
-    "learning_rate": [0.01, 0.1, 0.2],
+    "learning_rate": [0.05, 0.1],
     "subsample": [0.8, 1.0],
-    "scale_pos_weight": [1, 3],
 }
 
 MLP_PARAM_GRID = {
-    "hidden_layer_sizes": [
-        (64,),
-        (128,),
-        (64, 32),
-        (128, 64),
-        (128, 64, 32),
-    ],
-    "activation": ["relu", "tanh"],
-    "alpha": [0.0001, 0.001, 0.01],
-    "learning_rate": ["constant", "adaptive"],
-    "max_iter": [500],
+    "hidden_layer_sizes": [(64,), (128, 64), (128, 64, 32)],
+    "activation": ["relu"],
+    "alpha": [1e-4, 1e-3],
+    "learning_rate": ["adaptive"],
+    "max_iter": [400],
 }
 
 # ---------------------------------------------------------------------------
