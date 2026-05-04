@@ -185,9 +185,11 @@ def plot_feature_distributions_by_class(
             data=plot_df,
             x="_target",
             y=col,
+            hue="_target",
             palette={0: _NEGATIVE_COLOR, 1: _POSITIVE_COLOR},
             ax=axes_flat[idx],
             showfliers=False,
+            legend=False,
         )
         axes_flat[idx].set_title(col, fontsize=10)
         axes_flat[idx].set_xlabel("Class (0=FP, 1=CAND)", fontsize=9)
