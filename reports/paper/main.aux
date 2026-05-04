@@ -1,0 +1,103 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{borucki2010kepler,mcquillan2014rotation}
+\citation{koitable}
+\citation{shallue2018identifying,malik2022exoplanet}
+\citation{thompson2018planetary}
+\citation{shallue2018identifying,malik2022exoplanet}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Tabular vs.\ light-curve classification}{1}{subsection.2.1}\protected@file@percent }
+\citation{chen2016xgboost,prokhorenkova2018catboost}
+\citation{breiman2001random}
+\citation{hollmann2025tabpfn}
+\citation{chawla2002smote}
+\citation{koitable}
+\citation{kohavi1995study}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Target distribution before any preprocessing.}}{2}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:target}{{I}{2}{Target distribution before any preprocessing}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Tree-based methods on tabular data}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Class imbalance}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Dataset and Leakage Removal}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Target}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Leakage removal}{2}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Target distribution of the cumulative KOI table after the removal of rows with non-binary disposition labels.}}{2}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:eda-target}{{1}{2}{Target distribution of the cumulative KOI table after the removal of rows with non-binary disposition labels}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Pearson correlation matrix of the thirteen numeric features used for modelling. Colour scale ranges from blue ($\rho = -1$) to red ($\rho = +1$).}}{2}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:eda-corr}{{2}{2}{Pearson correlation matrix of the thirteen numeric features used for modelling. Colour scale ranges from blue ($\rho = -1$) to red ($\rho = +1$)}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Exploratory analysis}{2}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Preprocessing Pipeline}{2}{section.4}\protected@file@percent }
+\newlabel{sec:preprocessing}{{IV}{2}{Preprocessing Pipeline}{section.4}{}}
+\citation{chawla2002smote}
+\citation{breiman2001random}
+\citation{chen2016xgboost}
+\citation{rumelhart1986learning}
+\citation{matthews1975mcc}
+\citation{chicco2020advantages}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces First two principal components of the standardised feature matrix. The two classes are partially separable already in two dimensions.}}{3}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:eda-pca-scatter}{{3}{3}{First two principal components of the standardised feature matrix. The two classes are partially separable already in two dimensions}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Class-imbalance handling}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Train / Validation / Test split}{3}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Models}{3}{section.5}\protected@file@percent }
+\newlabel{sec:models}{{V}{3}{Models}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Logistic Regression}{3}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}$k$-Nearest Neighbours}{3}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Random Forest}{3}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}XGBoost}{3}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Multi-Layer Perceptron}{3}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-F}}Hyper-parameter optimisation}{3}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Evaluation Protocol}{3}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Results}{3}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Confusion-matrix view}{3}{subsection.7.1}\protected@file@percent }
+\citation{gorishniy2021revisiting}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Test-set leaderboard. XGBoost and MLP rows reflect tuned configurations; the others use scikit-learn defaults. Best value per column in \textbf  {bold}.}}{4}{table.caption.6}\protected@file@percent }
+\newlabel{tab:leaderboard}{{II}{4}{Test-set leaderboard. XGBoost and MLP rows reflect tuned configurations; the others use scikit-learn defaults. Best value per column in \textbf {bold}}{table.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces ROC curves on the held-out test set. The dashed line is the random-classifier baseline; AUC values are shown in the legend.}}{4}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:roc}{{4}{4}{ROC curves on the held-out test set. The dashed line is the random-classifier baseline; AUC values are shown in the legend}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Precision–recall curves on the test set, with average precision in the legend.}}{4}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:pr}{{5}{4}{Precision–recall curves on the test set, with average precision in the legend}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Feature importance}{4}{subsection.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Threshold-tuning analysis on the best (XGBoost) model.}}{4}{table.caption.12}\protected@file@percent }
+\newlabel{tab:threshold}{{III}{4}{Threshold-tuning analysis on the best (XGBoost) model}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Threshold tuning}{4}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Discussion}{4}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Why XGBoost wins}{4}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Why the MLP loses}{4}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Reproducibility}{4}{subsection.8.3}\protected@file@percent }
+\citation{astronet}
+\citation{hollmann2025tabpfn}
+\citation{helli2024drift}
+\bibstyle{IEEEtran}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion matrices on the test set. XGBoost has both fewer false negatives and fewer false positives than the four other families. The F$_1$ score is annotated above each panel.}}{5}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:cm}{{6}{5}{Confusion matrices on the test set. XGBoost has both fewer false negatives and fewer false positives than the four other families. The F$_1$ score is annotated above each panel}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Top-15 XGBoost feature importances (gain).}}{5}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:fi-xgb}{{7}{5}{Top-15 XGBoost feature importances (gain)}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Top-15 Random-Forest feature importances (mean decrease in impurity).}}{5}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:fi-rf}{{8}{5}{Top-15 Random-Forest feature importances (mean decrease in impurity)}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Application and Impact}{5}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {X}Limitations and Future Work}{5}{section.10}\protected@file@percent }
+\newlabel{sec:future}{{X}{5}{Limitations and Future Work}{section.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {XI}Conclusion}{5}{section.11}\protected@file@percent }
+\bibcite{borucki2010kepler}{1}
+\bibcite{koitable}{2}
+\bibcite{shallue2018identifying}{3}
+\bibcite{thompson2018planetary}{4}
+\bibcite{malik2022exoplanet}{5}
+\bibcite{breiman2001random}{6}
+\bibcite{chen2016xgboost}{7}
+\bibcite{prokhorenkova2018catboost}{8}
+\bibcite{hollmann2025tabpfn}{9}
+\bibcite{rumelhart1986learning}{10}
+\bibcite{chawla2002smote}{11}
+\bibcite{kohavi1995study}{12}
+\bibcite{matthews1975mcc}{13}
+\bibcite{chicco2020advantages}{14}
+\bibcite{mcquillan2014rotation}{15}
+\bibcite{gorishniy2021revisiting}{16}
+\bibcite{helli2024drift}{17}
+\bibcite{astronet}{18}
+\@writefile{toc}{\contentsline {section}{References}{6}{section*.18}\protected@file@percent }
+\gdef \@abspage@last{6}
