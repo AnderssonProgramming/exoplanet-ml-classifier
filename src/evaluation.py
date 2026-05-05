@@ -22,9 +22,7 @@ from sklearn.metrics import (
     roc_auc_score,
     roc_curve,
 )
-from sklearn.pipeline import Pipeline
-
-from src.constants import CLASSIFICATION_THRESHOLD
+from src.pipeline import Pipeline
 
 
 def compute_classification_metrics(
@@ -262,6 +260,6 @@ def _get_positive_class_proba(
     """
     if not hasattr(pipeline, "predict_proba"):
         raise AttributeError(
-            f"Pipeline classifier does not support predict_proba."
+            "Pipeline classifier does not support predict_proba."
         )
     return pipeline.predict_proba(X)[:, 1]

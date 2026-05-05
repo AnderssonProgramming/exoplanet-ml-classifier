@@ -25,7 +25,7 @@ from sklearn.metrics import (
 )
 from sklearn.pipeline import Pipeline
 
-from src.constants import FIGURES_PATH, MODEL_NAMES, NUMERIC_FEATURES
+from src.constants import FIGURES_PATH, NUMERIC_FEATURES
 
 # Consistent aesthetics across all plots
 sns.set_theme(style="whitegrid", palette="muted")
@@ -131,7 +131,6 @@ def plot_correlation_heatmap(
     available = [c for c in NUMERIC_FEATURES if c in df.columns]
     corr = df[available].corr(method="pearson")
 
-    mask = np.triu(np.ones_like(corr, dtype=bool), k=1)
     fig, ax = plt.subplots(figsize=(10, 8), dpi=_FIGURE_DPI)
     sns.heatmap(
         corr,
@@ -178,7 +177,9 @@ def plot_feature_distributions_by_class(
     plot_df["_target"] = target.values
 
     fig, axes = plt.subplots(nrows, ncols, figsize=(ncols * 5, nrows * 4), dpi=_FIGURE_DPI)
-    axes_flat = axes.flatten()
+    axes_flat = axes.flatten(
+        nrows, ncols, figsize=(ncols * 5, nrows * 4), dpi=_FIGURE_DPI
+    
 
     for idx, col in enumerate(available):
         sns.boxplot(

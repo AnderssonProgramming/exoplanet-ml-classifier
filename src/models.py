@@ -21,7 +21,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 
-from src.constants import MODEL_NAMES, PRIMARY_METRIC, RANDOM_SEED
+from src.constants import PRIMARY_METRIC, RANDOM_SEED
 
 
 def build_model_zoo(random_state: int = RANDOM_SEED) -> dict[str, BaseEstimator]:
