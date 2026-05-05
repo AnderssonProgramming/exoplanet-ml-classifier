@@ -22,7 +22,7 @@ from sklearn.metrics import (
     roc_auc_score,
     roc_curve,
 )
-from src.pipeline import Pipeline
+from sklearn.pipeline import Pipeline
 
 
 def compute_classification_metrics(
