@@ -176,11 +176,10 @@ def plot_feature_distributions_by_class(
     plot_df = df[available].copy()
     plot_df["_target"] = target.values
 
-    fig, axes = plt.subplots(nrows, ncols, figsize=(ncols * 5, nrows * 4), dpi=_FIGURE_DPI)
-    axes_flat = axes.flatten(
+    fig, axes = plt.subplots(
         nrows, ncols, figsize=(ncols * 5, nrows * 4), dpi=_FIGURE_DPI
-    
-
+    )
+    axes_flat = axes.flatten()
     for idx, col in enumerate(available):
         sns.boxplot(
             data=plot_df,
