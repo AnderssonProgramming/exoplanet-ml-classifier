@@ -101,6 +101,20 @@ MLP_PARAM_GRID = {
     "max_iter": [400],
 }
 
+# Soft-margin C and RBF gamma exploration follow the slide deck of
+# Session 04 (Hortua / Olier).
+SVM_PARAM_GRID = {
+    "C": [0.1, 1.0, 10.0],
+    "kernel": ["linear", "rbf"],
+    "gamma": ["scale", 0.01, 0.1],
+}
+
+DECISION_TREE_PARAM_GRID = {
+    "criterion": ["gini", "entropy"],
+    "max_depth": [None, 5, 10, 20],
+    "min_samples_split": [2, 5, 10],
+}
+
 # ---------------------------------------------------------------------------
 # Evaluation
 # ---------------------------------------------------------------------------
@@ -110,6 +124,8 @@ CLASSIFICATION_THRESHOLD = 0.5
 MODEL_NAMES = [
     "logistic_regression",
     "knn",
+    "decision_tree",
+    "svm",
     "random_forest",
     "xgboost",
     "mlp",

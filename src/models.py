@@ -19,13 +19,19 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 from xgboost import XGBClassifier
 
 from src.constants import PRIMARY_METRIC, RANDOM_SEED
 
 
 def build_model_zoo(random_state: int = RANDOM_SEED) -> dict[str, BaseEstimator]:
-    """Instantiate all five classifier families with sensible defaults.
+    """Instantiate all seven classifier families with sensible defaults.
+
+    Returns Logistic Regression, k-NN, Decision Tree, SVM, Random Forest,
+    XGBoost, and MLP — covering linear, instance-based, single-tree,
+    margin-based, bagging, boosting, and neural inductive biases.
 
     Args:
         random_state: Integer seed passed to all stochastic estimators.
@@ -40,6 +46,16 @@ def build_model_zoo(random_state: int = RANDOM_SEED) -> dict[str, BaseEstimator]
             random_state=random_state,
         ),
         "knn": KNeighborsClassifier(),
+        "decision_tree": DecisionTreeClassifier(
+            random_state=random_state,
+        ),
+        "svm": SVC(
+            kernel="rbf",
+            C=1.0,
+            gamma="scale",
+            probability=True,
+            random_state=random_state,
+        ),
         "random_forest": RandomForestClassifier(
             n_estimators=100,
             random_state=random_state,
