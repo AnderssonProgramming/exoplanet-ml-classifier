@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/XGBoost-2.0%2B-008CC1" alt="XGBoost"/>
   <img src="https://img.shields.io/badge/imbalanced--learn-0.12%2B-7E57C2" alt="imbalanced-learn"/>
   <img src="https://img.shields.io/badge/SHAP-0.44%2B-E91E63" alt="SHAP"/>
-  <img src="https://img.shields.io/badge/Tests-63%20passing-brightgreen" alt="Tests"/>
+  <img src="https://img.shields.io/badge/Tests-78%20passing-brightgreen" alt="Tests"/>
   <img src="https://img.shields.io/badge/License-Apache%202.0-2196F3" alt="License"/>
   <img src="https://img.shields.io/badge/Course-MLEA__M%20%E2%80%94%20ECI%202026--1-5E35B1" alt="ECI 2026-1"/>
   <img src="https://img.shields.io/badge/NASA%20Space%20Apps%202025-Global%20Finalist-FB8C00?logo=nasa" alt="NASA Space Apps 2025"/>
@@ -218,7 +218,7 @@ flowchart TB
 
 ## 🧪 Methodology
 
-### Why these five classifiers?
+### Why these seven classifiers?
 
 Each model represents a *different inductive bias*, which is exactly what the
 course rubric asks for and what produces honest comparisons:
@@ -227,9 +227,15 @@ course rubric asks for and what produces honest comparisons:
 | --- | --- | --- | --- | --- |
 | **Linear** | Logistic Regression | Are the classes linearly separable in feature space? | Fast, interpretable coefficients | Weak with non-linear interactions |
 | **Instance-based** | k-Nearest Neighbours | Does local geometry carry the signal? | No assumptions, captures local clusters | Slow at inference, scale-sensitive |
+| **Single CART** | Decision Tree | Where would axis-aligned splits separate the classes? | Maximum interpretability, no scaling needed | Unstable, high variance on small data perturbations |
+| **Margin-based** | Support Vector Machine (RBF) | Does a kernelised margin maximiser beat trees here? | Strong theory, RBF handles non-linear boundaries | Probability calibration is expensive, large *n* slow |
 | **Tree ensemble (bagging)** | Random Forest | Do non-linear feature interactions help? | Variance reduction via bagging, native importance | Larger memory footprint |
 | **Tree ensemble (boosting)** | XGBoost | Does sequential error-correction beat bagging? | State of the art on tabular data, regularised | More hyper-parameters |
 | **Neural network** | MLP (1–3 hidden layers) | Does a universal approximator help here? | Flexible non-linear function approximator | Sensitive to scale/seed |
+
+The first five rows cover every algorithm Hortua dedicates a slide to in
+Session 04 (Supervised Learning), giving the comparison real breadth instead
+of stacking variants of the same family.
 
 ### Mathematical formulation
 
@@ -315,6 +321,31 @@ hyper-parameters.
 
 ---
 
+## 🎓 Course-Aligned Extensions
+
+Notebook **`05_course_extensions.ipynb`** complements the main leaderboard with
+the techniques covered in Hortua's three classroom sessions, so the project
+exercises every topic of the course rubric — not just the five families that
+fight for first place:
+
+| Session | Topic | Where it lives |
+| --- | --- | --- |
+| **04 — Supervised learning** | SVM (RBF kernel) tuned over `C × γ`; single Decision Tree baseline | `src/models.py` (in the zoo) and §2–§3 of notebook 05 |
+| **05 — ML modelling** | Filter / wrapper / embedded feature selection, side-by-side; learning curve for the winning model | `src/feature_selection.py` + §4 and §7 of notebook 05 |
+| **06 — Unsupervised learning** | GMM with BIC/AIC component selection, t-SNE & UMAP non-linear projections | `src/visualization.py` + §5–§6 of notebook 05 |
+
+Three takeaways the extensions surface that the main leaderboard cannot:
+
+- **All three selectors agree** on `koi_model_snr`, `koi_prad`, and `koi_depth`
+  as essential — independent evidence for the XGBoost feature-importance plot.
+- **GMM ellipses** highlight the overlap region near the class boundary, which
+  is exactly where threshold tuning on the ROC curve recovers recall.
+- **The learning curve flattens** before reaching the full training set,
+  meaning more KOI rows are unlikely to lift F1 further — the next gain has
+  to come from richer features (light-curve morphology, stellar metallicity).
+
+---
+
 ## 📁 Repository Layout
 
 ```text
@@ -328,7 +359,8 @@ exoplanet-ml-classifier/
 │   ├── 01_eda.ipynb                  # Exploratory Data Analysis
 │   ├── 02_preprocessing.ipynb        # Leakage removal · SMOTE · split
 │   ├── 03_models_and_metrics.ipynb   # Train · tune · compare 5 classifiers
-│   └── 04_final_presentation.ipynb   # End-to-end pipeline demo
+│   ├── 04_final_presentation.ipynb   # End-to-end pipeline demo
+│   └── 05_course_extensions.ipynb    # SVM · CART · selectors · GMM · t-SNE · UMAP
 ├── reports/
 │   ├── figures/                      # All saved visualisations (.png)
 │   └── paper/                        # IEEE LaTeX paper sources
@@ -340,12 +372,14 @@ exoplanet-ml-classifier/
 │   ├── preprocessing.py              # ColumnTransformer · SMOTE · splits
 │   ├── models.py                     # Model zoo · GridSearchCV · persistence
 │   ├── evaluation.py                 # All metrics · threshold tuning
+│   ├── feature_selection.py          # Filter · wrapper · embedded selectors
 │   └── visualization.py              # All plots (matplotlib / seaborn)
-├── tests/                            # 63 unit tests · 100 % of public API
+├── tests/                            # 78 unit tests · 100 % of public API
 │   ├── test_data_loader.py
 │   ├── test_preprocessing.py
 │   ├── test_models.py
 │   ├── test_evaluation.py
+│   ├── test_feature_selection.py
 │   └── test_visualization.py
 ├── COMMIT_CONVENTION.md              # Conventional Commits cheat-sheet
 ├── LICENSE                           # Apache 2.0

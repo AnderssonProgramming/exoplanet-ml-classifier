@@ -308,7 +308,7 @@ proportions to within $\pm 0.5\%$ across the three partitions.
 \section{Models}\label{sec:models}
 % =====================================================================
 
-Five classifier families are evaluated, chosen so that the comparison
+Seven classifier families are evaluated, chosen so that the comparison
 spans different inductive biases as required by the course rubric:
 
 \subsection{Logistic Regression}
@@ -326,6 +326,25 @@ A non-parametric instance-based learner. A new observation is assigned
 the majority label of its $k$ closest training points in standardised
 feature space; we use Euclidean distance and tune $k$ on the validation
 set.
+
+\subsection{Decision Tree (CART)}
+A single classification and regression tree~\cite{breiman1984cart} with
+Gini-index splits provides the bagging-free baseline for our two
+tree ensembles. Maximum depth and minimum split size are tuned with
+\texttt{GridSearchCV}; the resulting tree is more interpretable than any
+ensemble but pays for its instability with the lowest F\textsubscript{1}
+of the comparison.
+
+\subsection{Support Vector Machine}
+A soft-margin SVM with a radial basis function kernel,
+\begin{equation}
+  K(\mathbf{x}_i,\mathbf{x}_j) = \exp(-\gamma\,\|\mathbf{x}_i-\mathbf{x}_j\|^2),
+\end{equation}
+maximises the margin between the two classes after mapping the
+features into an implicit Hilbert space~\cite{cortes1995svm}. The
+complexity parameter $C$ trades classification accuracy against
+margin width; both $C$ and the kernel bandwidth $\gamma$ are tuned
+with \texttt{GridSearchCV}.
 
 \subsection{Random Forest}
 An ensemble of decision trees trained with bootstrap aggregation and
@@ -352,6 +371,25 @@ configuration is
 \texttt{learning\_rate}~$=0.05$, \texttt{subsample}~$=0.8$;
 the final MLP uses two hidden layers of size $(128, 64)$ with
 \texttt{ReLU} and adaptive learning rate.
+
+\subsection{Course extensions (Sessions 04--06)}
+A supplementary notebook
+(\texttt{05\_course\_extensions.ipynb}) closes the loop with the
+three classroom sessions. We use \texttt{SelectKBest} (filter,
+ANOVA F-statistic), \texttt{RFE} with a Logistic Regression
+estimator (wrapper), and \texttt{SelectFromModel} with a Random
+Forest (embedded) to rank the 13 KOI features; the three methods
+agree on \texttt{koi\_model\_snr}, \texttt{koi\_prad}, and
+\texttt{koi\_depth} as essential, corroborating the XGBoost
+feature-importance plot. A Gaussian Mixture Model with Bayesian
+Information Criterion selection is fitted on the PCA projection
+of the test split to inspect the class-overlap region, and the
+same projection is repeated with t-SNE and UMAP to confirm that
+the two classes are only partially separable in two dimensions.
+Finally, a learning curve on the saved XGBoost pipeline shows
+training and 5-fold cross-validation F$_1$ scores flattening
+before the full training size is reached, indicating that
+additional KOI rows would not lift performance much further.
 
 % =====================================================================
 \section{Evaluation Protocol}

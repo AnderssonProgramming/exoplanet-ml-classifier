@@ -27,7 +27,7 @@ PROJECT BRIEF
   (Frontend: github.com/JAPV-X2612/ECI-Centauri-Frontend,
    Backend:  github.com/JAPV-X2612/ECI-Centauri-Backend,
    CNN:      github.com/Ch0comilo/astronet-cnn-v3)
-- Time budget: 12 minutes. Plan ~16-18 slides.
+- Time budget: 12 minutes. Plan ~18-20 slides.
 - Submission rubric (50 pts total, NEVER mention the points but cover every category):
    1. Problem & motivation (4 pts)
    2. Data (4 pts)
@@ -103,17 +103,19 @@ Slide 8 — Mathematical foundations
      • SMOTE synthetic sample:
        x_new = xᵢ + λ(x_nn − xᵢ),  λ ~ U(0,1)
 
-Slide 9 — Five classifiers (model zoo)
+Slide 9 — Seven classifiers (model zoo)
    - Single table with rows = algorithm, cols = "What it tests", "Strength",
      "Weakness".
-   - Rows: Logistic Regression, k-NN, Random Forest, XGBoost, MLP.
-   - One sentence below table: each row picks a different inductive bias on
-     purpose so the comparison is honest.
+   - Rows: Logistic Regression, k-NN, Decision Tree (CART), SVM (RBF),
+     Random Forest, XGBoost, MLP.
+   - One sentence below table: every algorithm from Hortua's Session 04
+     slide deck is represented, so the comparison covers every inductive
+     bias the course defends.
 
 Slide 10 — Architecture in one picture
-   - Show the project's main mermaid pipeline (load → preprocess → 5 models →
+   - Show the project's main mermaid pipeline (load → preprocess → 7 models →
      GridSearchCV → evaluate → save .joblib).
-   - Mention: 6 reusable src/ modules, 63 unit tests, deterministic seed 42.
+   - Mention: 7 reusable src/ modules, 78 unit tests, deterministic seed 42.
 
 Slide 11 — Hyper-parameter tuning
    - GridSearchCV with 5-fold CV, scoring = F1.
@@ -154,14 +156,25 @@ Slide 16 — Feature importance & interpretability
    - Highlight: koi_model_snr, koi_prad, koi_depth dominate — physically sensible.
    - Note that Logistic Regression coefficients are also available (single line).
 
-Slide 17 — Application & impact
+Slide 17 — Course extensions (Sessions 04–06)
+   - Three-column layout, one column per teacher session:
+     • Session 04 — added SVM (RBF) and a single Decision Tree CART so
+       the model zoo spans every algorithm in the slide deck.
+     • Session 05 — three feature selectors (filter SelectKBest, wrapper
+       RFE, embedded SelectFromModel) agree on koi_model_snr / koi_prad
+       / koi_depth as the top features.
+     • Session 06 — GMM with BIC/AIC for component selection, plus
+       t-SNE and UMAP non-linear projections of the test split.
+   - Embed `feature_selection_comparison.png` and `gmm_pca_ellipses.png`.
+
+Slide 18 — Application & impact
    - Three small icons + one-line each:
      • NASA Exoplanet Archive operators → faster triage.
      • Astronomers → higher-purity follow-up list, less wasted telescope time.
      • Education → open, fully reproducible baseline.
    - Honest limitation: tabular features only, no light-curve morphology.
 
-Slide 18 — Conclusions & next steps
+Slide 19 — Conclusions & next steps
    - 4 bullets:
      1. Tuned XGBoost is the winner (F1=0.860, ROC-AUC=0.936, MCC=0.721).
      2. Removing label leakage was essential.
@@ -169,7 +182,7 @@ Slide 18 — Conclusions & next steps
      4. Future: combine with light-curve CNN, try TabPFN, calibrate probabilities.
    - Add: code at github.com/AnderssonProgramming/exoplanet-ml-classifier (Apache 2.0).
 
-Slide 19 (optional, only if time allows) — Q&A / Thank you
+Slide 20 (optional, only if time allows) — Q&A / Thank you
    - "Thank you" centred. Author emails. Acknowledgements (NASA, ECI, Profs).
    - NASA Space Apps Global Finalist 2025 badge bottom right.
 
@@ -220,6 +233,12 @@ LANGUAGE: ENGLISH.
 | PCA scatter | `reports/figures/pca_scatter.png` |
 | PCA explained variance | `reports/figures/pca_explained_variance.png` |
 | KMeans on PCA | `reports/figures/kmeans_pca.png` |
+| GMM BIC/AIC selection | `reports/figures/gmm_bic_aic.png` |
+| GMM ellipses on PCA | `reports/figures/gmm_pca_ellipses.png` |
+| t-SNE scatter | `reports/figures/tsne_scatter.png` |
+| UMAP scatter | `reports/figures/umap_scatter.png` |
+| Feature selection comparison | `reports/figures/feature_selection_comparison.png` |
+| Learning curve (XGBoost) | `reports/figures/learning_curve_xgboost_-_learning_curve_(f1).png` |
 
 ## ✅ Final pre-flight checklist (the day before)
 
