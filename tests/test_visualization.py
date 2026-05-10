@@ -15,12 +15,18 @@ from sklearn.linear_model import LogisticRegression
 
 from src.constants import NUMERIC_FEATURES, RANDOM_SEED
 from src.preprocessing import get_full_pipeline
+from src.feature_selection import compare_selectors
 from src.visualization import (
     plot_correlation_heatmap,
+    plot_feature_selection_comparison,
+    plot_gmm_bic_aic,
+    plot_gmm_clusters_on_pca,
+    plot_learning_curve,
     plot_overlay_pr_curves,
     plot_overlay_roc_curves,
     plot_pca_scatter,
     plot_target_distribution,
+    plot_tsne_scatter,
 )
 
 
@@ -97,3 +103,47 @@ class TestPlotsDoNotRaise:
         plot_overlay_pr_curves(
             trained_pipelines, numeric_df, binary_target, save=False
         )
+
+    def test_gmm_bic_aic_returns_int(self, numeric_df: pd.DataFrame) -> None:
+        best = plot_gmm_bic_aic(numeric_df.values, range(1, 4), save=False)
+        assert isinstance(best, int)
+        assert 1 <= best <= 3
+
+    def test_gmm_clusters_on_pca(
+        self, numeric_df: pd.DataFrame, binary_target: pd.Series
+    ) -> None:
+        plot_gmm_clusters_on_pca(
+            numeric_df.values, binary_target.values, n_components=2, save=False
+        )
+
+    def test_tsne_scatter(
+        self, numeric_df: pd.DataFrame, binary_target: pd.Series
+    ) -> None:
+        plot_tsne_scatter(
+            numeric_df.values, binary_target.values, perplexity=10, save=False
+        )
+
+    def test_learning_curve(
+        self,
+        numeric_df: pd.DataFrame,
+        binary_target: pd.Series,
+    ) -> None:
+        pipeline = get_full_pipeline(
+            LogisticRegression(max_iter=500, random_state=RANDOM_SEED)
+        )
+        plot_learning_curve(
+            pipeline,
+            numeric_df,
+            binary_target,
+            cv=3,
+            scoring="f1",
+            train_sizes=np.linspace(0.3, 1.0, 3),
+            title="LR test curve",
+            save=False,
+        )
+
+    def test_feature_selection_comparison(
+        self, numeric_df: pd.DataFrame, binary_target: pd.Series
+    ) -> None:
+        comparison = compare_selectors(numeric_df, binary_target.values, k=4)
+        plot_feature_selection_comparison(comparison, save=False)
