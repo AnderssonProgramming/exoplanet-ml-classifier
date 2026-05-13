@@ -323,7 +323,7 @@ hyper-parameters.
 | F1-optimal (0.43) | 0.8624 | 0.8285 | 0.8993 | 0.7223 |
 
 > Lowering the threshold trades a small precision loss for a meaningful recall
-> gain — the right call when **missed planets cost more than wasted follow-ups**.
+> gain, the right call when **missed planets cost more than wasted follow-ups**.
 
 ---
 
@@ -343,11 +343,11 @@ fight for first place:
 Three takeaways the extensions surface that the main leaderboard cannot:
 
 - **All three selectors agree** on `koi_model_snr`, `koi_prad`, and `koi_depth`
-  as essential — independent evidence for the XGBoost feature-importance plot.
+  as essential, independent evidence for the XGBoost feature-importance plot.
 - **GMM ellipses** highlight the overlap region near the class boundary, which
   is exactly where threshold tuning on the ROC curve recovers recall.
 - **The learning curve flattens** before reaching the full training set,
-  meaning more KOI rows are unlikely to lift F1 further — the next gain has
+  meaning more KOI rows are unlikely to lift F1 further, the next gain has
   to come from richer features (light-curve morphology, stellar metallicity).
 
 ---
@@ -451,7 +451,7 @@ jupyter notebook
 | 05 | `05_course_extensions.ipynb` | Supervised & Unsupervised Learning, ML Modelling |
 
 All artefacts (figures, processed CSVs, the `.joblib` pipeline) are written
-deterministically — re-running gives identical numbers thanks to `RANDOM_SEED = 42`.
+deterministically, re-running gives identical numbers thanks to `RANDOM_SEED = 42`.
 
 ### 6. Lint
 
