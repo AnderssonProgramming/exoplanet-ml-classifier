@@ -108,9 +108,9 @@ INTRO_MD_AUTHORS = """\
 | Student | **Andersson David Sánchez Méndez** |
 | Student | **Cristian Santiago Pedraza Rodríguez** |
 | Professor | **Mario Julián Cañón Ayala** |
-| Professor | **Hector Javier Hortua Orjuela** |
+| Professor | **Héctor Javier Hortúa Orjuela** |
 
-🎓 *MLEA_M — Machine Learning · Maestría en Ciencia de Datos*
+🎓 *MLEA_M — Machine Learning · Master's in Data Science*
 🏫 *Escuela Colombiana de Ingeniería Julio Garavito · 2026-1*
 """
 

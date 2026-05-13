@@ -23,7 +23,13 @@
 </p>
 
 <p align="center">
-  <b>A reproducible, course-grade machine-learning pipeline that decides whether a Kepler Object of Interest is a genuine exoplanet candidate or a false positive — using nothing but the photometric and stellar features that NASA records before vetting.</b>
+  <b>A reproducible, course-grade machine-learning pipeline that decides whether a Kepler Object of Interest is a genuine exoplanet candidate or a false positive, using nothing but the photometric and stellar features that NASA records before vetting.</b>
+</p>
+
+<p align="center">
+  🔗 <b>Related Repositories:</b><br/>
+  <a href="https://github.com/AnderssonProgramming/exoplanet-ml-classifier-design-system">Exoplanet Design System</a> • 
+  <a href="https://github.com/Maestria-en-Ciencia-de-datos-HWTNM/Machine_Learning_Intro">Machine Learning Intro</a>
 </p>
 
 ---
@@ -48,7 +54,7 @@
 ## 🚀 Why This Project
 
 The **Kepler Space Telescope** observed more than 150 000 stars and produced almost
-10 000 *Kepler Objects of Interest* (KOIs) — periodic dimming events that **could**
+10 000 *Kepler Objects of Interest* (KOIs), such as periodic dimming events that **could**
 be caused by a planet transiting in front of its host star, but could equally be
 caused by eclipsing binary stars, instrument noise, or stellar variability.
 
@@ -58,8 +64,8 @@ NASA's vetting pipeline assigns each candidate a final disposition (`CONFIRMED`,
 a reliable classifier can reduce the load on human vetters and accelerate
 follow-up observation campaigns.
 
-This repository documents a full Machine-Learning workflow — from raw CSV to
-deployable pipeline — and was developed for the *MLEA_M — Machine Learning*
+This repository documents a full Machine-Learning workflow, from raw CSV to
+deployable pipeline, and was developed for the *MLEA_M — Machine Learning*
 course of the **Master in Data Science** at **Escuela Colombiana de Ingeniería
 Julio Garavito**, period 2026-1.
 
@@ -78,7 +84,7 @@ Julio Garavito**, period 2026-1.
 | **Decision supported** | Should the KOI be promoted to a follow-up observation queue? |
 | **Risk profile** | False negatives (missed planets) are scientifically more costly than false positives (wasted telescope time). The metric must reflect that. |
 
-We frame this as binary classification — not multi-class — because the practical
+We frame this as binary classification: not multi-class because the practical
 question for a vetting pipeline is *"is this candidate worth keeping?"*. The
 finer `CONFIRMED` vs `CANDIDATE` distinction depends on follow-up data not present
 in the table.
@@ -174,6 +180,7 @@ graph TD
         n2[02_preprocessing.ipynb]
         n3[03_models_and_metrics.ipynb]
         n4[04_final_presentation.ipynb]
+        n5[05_course_extensions.ipynb]
     end
     subgraph t["🧪 tests/"]
         t1[test_data_loader.py]
@@ -233,8 +240,7 @@ course rubric asks for and what produces honest comparisons:
 | **Tree ensemble (boosting)** | XGBoost | Does sequential error-correction beat bagging? | State of the art on tabular data, regularised | More hyper-parameters |
 | **Neural network** | MLP (1–3 hidden layers) | Does a universal approximator help here? | Flexible non-linear function approximator | Sensitive to scale/seed |
 
-The first five rows cover every algorithm Hortua dedicates a slide to in
-Session 04 (Supervised Learning), giving the comparison real breadth instead
+The rows cover every algorithm that gives the comparison real breadth instead
 of stacking variants of the same family.
 
 ### Mathematical formulation
@@ -324,8 +330,8 @@ hyper-parameters.
 ## 🎓 Course-Aligned Extensions
 
 Notebook **`05_course_extensions.ipynb`** complements the main leaderboard with
-the techniques covered in Hortua's three classroom sessions, so the project
-exercises every topic of the course rubric — not just the five families that
+the techniques covered in classroom sessions, so the project
+exercises every topic of the course rubric, not just the five families that
 fight for first place:
 
 | Session | Topic | Where it lives |
@@ -366,6 +372,9 @@ exoplanet-ml-classifier/
 │   └── paper/                        # IEEE LaTeX paper sources
 ├── models/
 │   └── best_xgboost.joblib           # Persisted best pipeline
+├── scripts/                          # One-off notebook builders
+│   ├── _build_extensions_nb.py       # Rebuilds 05_course_extensions.ipynb from source
+│   └── _build_intro_nb.py            # Rebuilds 00_intro.ipynb from source
 ├── src/                              # Reusable library
 │   ├── constants.py                  # Single source of truth for paths / grids
 │   ├── data_loader.py                # CSV I/O, leakage handling
@@ -432,13 +441,14 @@ pytest tests/ -v
 jupyter notebook
 ```
 
-| # | Notebook | What it does | Run-time |
-| --- | --- | --- | --- |
-| 00 | `00_intro.ipynb` | Project framing & problem motivation | < 30 s |
-| 01 | `01_eda.ipynb` | Distributions · correlations · PCA · KMeans | ~ 1 min |
-| 02 | `02_preprocessing.ipynb` | Leakage removal · SMOTE check · stratified split | < 30 s |
-| 03 | `03_models_and_metrics.ipynb` | Train all 5, GridSearch XGBoost & MLP | ~ 5 min |
-| 04 | `04_final_presentation.ipynb` | End-to-end pipeline demo + save best model | ~ 5 min |
+| # | Notebook | What it does |
+| --- | --- | --- |
+| 00 | `00_intro.ipynb` | Project framing & problem motivation |
+| 01 | `01_eda.ipynb` | Distributions · correlations · PCA · KMeans |
+| 02 | `02_preprocessing.ipynb` | Leakage removal · SMOTE check · stratified split |
+| 03 | `03_models_and_metrics.ipynb` | Train all 5, GridSearch XGBoost & MLP |
+| 04 | `04_final_presentation.ipynb` | End-to-end pipeline demo + save best model |
+| 05 | `05_course_extensions.ipynb` | Supervised & Unsupervised Learning, ML Modelling |
 
 All artefacts (figures, processed CSVs, the `.joblib` pipeline) are written
 deterministically — re-running gives identical numbers thanks to `RANDOM_SEED = 42`.
@@ -462,7 +472,7 @@ flake8 src/ tests/
 
 **Honest limitations.** The model only consumes tabular features; light-curve
 shape is *not* used here, which a CNN (such as the [astronet-cnn-v3](https://github.com/Ch0comilo/astronet-cnn-v3)
-companion repository) does. The two approaches are complementary — a tabular
+companion repository) does. The two approaches are complementary: a tabular
 classifier is fast and cheap, a CNN sees morphology the table cannot.
 
 ---
@@ -510,9 +520,9 @@ flowchart LR
 | **Student** | Andersson David Sánchez Méndez — [@AnderssonProgramming](https://github.com/AnderssonProgramming) |
 | **Student** | Cristian Santiago Pedraza Rodríguez — [@cris-eci](https://github.com/cris-eci) |
 | **Professor** | Mario Julián Cañón Ayala |
-| **Professor** | Hector Javier Hortua Orjuela |
+| **Professor** | Héctor Javier Hortúa Orjuela |
 
-> 🎓 *MLEA_M — Machine Learning · Maestría en Ciencia de Datos*
+> 🎓 *MLEA_M — Machine Learning · Master's in Data Science*
 > 🏫 *Escuela Colombiana de Ingeniería Julio Garavito · 2026-1*
 
 ---

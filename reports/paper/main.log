@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.16)  4 MAY 2026 08:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.16)  12 MAY 2026 05:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -607,7 +607,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 78
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 80
 .
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -621,7 +621,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
 
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -629,148 +629,236 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
 
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1{C:/Users/Usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/User
-s/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{C:/Users/Usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users
+/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 226--229
-[]\T1/pcr/m/n/10 koi_fpflag_nt\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_fpflag_
-ss\T1/ptm/m/n/10 (+20) ,
+Underfull \hbox (badness 4595) in paragraph at lines 181--185
+[]\T1/ptm/m/n/10 (+20) Hyper-parameter tun-ing by 5-fold cross-validated
+ []
+
+[2]
+Underfull \hbox (badness 5832) in paragraph at lines 327--338
+[]\T1/ptm/m/n/10 (+20) Removing the ten leaks leaves thir-teen phys-i-cally
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
-[]\T1/ptm/m/n/10 (+20) Identifier columns: \T1/pcr/m/n/10 kepid\T1/ptm/m/n/10 (
-+20) , \T1/pcr/m/n/10 kepoi_name\T1/ptm/m/n/10 (+20) ,
+Underfull \hbox (badness 4699) in paragraph at lines 327--338
+\T1/ptm/m/n/10 (+20) mean-ing-ful nu-meric fea-tures span-ning tran-sit pho-tom
+-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--240
-\T1/ptm/m/n/10 (+20) fea-tures span-ning tran-sit pho-tom-e-try (\T1/pcr/m/n/10
- koi_period\T1/ptm/m/n/10 (+20) ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--240
+Underfull \hbox (badness 3449) in paragraph at lines 327--338
+\T1/ptm/m/n/10 (+20) e-try --- \T1/pcr/m/n/10 koi_period\T1/ptm/m/n/10 (+20) , 
 \T1/pcr/m/n/10 koi_time0bk\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_impact\T1/p
-tm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_duration\T1/ptm/m/n/10 (+20) ,
+tm/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--240
-\T1/pcr/m/n/10 koi_depth\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_prad\T1/ptm/m
-/n/10 (+20) , \T1/pcr/m/n/10 koi_teq\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_i
-nsol\T1/ptm/m/n/10 (+20) ,
+Underfull \hbox (badness 4967) in paragraph at lines 327--338
+\T1/pcr/m/n/10 koi_duration\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_depth\T1/p
+tm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_prad\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 
+koi_teq\T1/ptm/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 233--240
-\T1/pcr/m/n/10 koi_model_snr\T1/ptm/m/n/10 (+20) ) and stel-lar prop-er-ties (\
-T1/pcr/m/n/10 koi_steff\T1/ptm/m/n/10 (+20) ,
+Underfull \hbox (badness 2495) in paragraph at lines 327--338
+\T1/pcr/m/n/10 koi_insol\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 koi_model_snr \T1
+/ptm/m/n/10 (+20) --- and stel-lar prop-er-
  []
 
-<../figures/target_distribution.png, id=173, 422.0568pt x 277.035pt>
+
+Underfull \hbox (badness 1590) in paragraph at lines 340--363
+[]\T1/ptm/m/n/10 (+20) Figure [][]1[][] shows the near-balanced tar-get dis-tri
+-bu-tion;
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 340--363
+\T1/ptm/m/n/10 (+20) re-tained fea-tures. The ma-trix high-lights a near-perfec
+t
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--363
+\T1/ptm/m/n/10 (+20) in \T1/pcr/m/n/10 histograms_numeric_features.png\T1/ptm/m
+/n/10 (+20) ) and
+ []
+
+
+Underfull \hbox (badness 7558) in paragraph at lines 340--363
+\T1/ptm/m/n/10 (+20) a non-trivial num-ber of miss-ing val-ues (vis-i-ble in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--363
+\T1/pcr/m/n/10 missing_values_heatmap.png\T1/ptm/m/n/10 (+20) ), mo-ti-vat-ing 
+the
+ []
+
+<../figures/target_distribution.png, id=245, 422.0568pt x 277.035pt>
 File: ../figures/target_distribution.png Graphic file (type png)
 <use ../figures/target_distribution.png>
 Package pdftex.def Info: ../figures/target_distribution.png  used on input line
- 255.
+ 366.
 (pdftex.def)             Requested size: 214.20154pt x 140.60117pt.
-<../figures/correlation_heatmap.png, id=175, 678.8562pt x 566.115pt>
+<../figures/correlation_heatmap.png, id=247, 678.8562pt x 566.115pt>
 File: ../figures/correlation_heatmap.png Graphic file (type png)
 <use ../figures/correlation_heatmap.png>
 Package pdftex.def Info: ../figures/correlation_heatmap.png  used on input line
- 263.
+ 374.
 (pdftex.def)             Requested size: 239.39923pt x 199.63762pt.
-<../figures/pca_scatter.png, id=176, 494.3268pt x 349.7868pt>
+<../figures/pca_scatter.png, id=248, 494.3268pt x 349.7868pt>
 File: ../figures/pca_scatter.png Graphic file (type png)
 <use ../figures/pca_scatter.png>
-Package pdftex.def Info: ../figures/pca_scatter.png  used on input line 272.
+Package pdftex.def Info: ../figures/pca_scatter.png  used on input line 383.
 (pdftex.def)             Requested size: 214.20154pt x 151.56892pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--286
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
 []\T1/ptm/m/n/10 (+20) Preprocessing is en-cap-su-lated in a sin-gle
  []
 
-[2 <../figures/target_distribution.png> <../figures/correlation_heatmap.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--405
+\T1/ptm/m/n/10 (+20) The trans-former is wrapped in-side a scikit-learn
+ []
+
+[3 <../figures/target_distribution.png> <../figures/correlation_heatmap.png>]
+<../figures/ml_architecture.png, id=270, 1455.4375pt x 856.19875pt>
+File: ../figures/ml_architecture.png Graphic file (type png)
+<use ../figures/ml_architecture.png>
+Package pdftex.def Info: ../figures/ml_architecture.png  used on input line 432
+.
+(pdftex.def)             Requested size: 495.36346pt x 291.4042pt.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 324.
+(hyperref)                removing `math shift' on input line 463.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 324.
+(hyperref)                removing `math shift' on input line 463.
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 348--355
+Underfull \hbox (badness 4441) in paragraph at lines 506--513
 \OT1/cmr/m/n/10 200$\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 max_depth $\OT1/cmr/m
 /n/10 = 7$\T1/ptm/m/n/10 (+20) , \T1/pcr/m/n/10 learning_rate $\OT1/cmr/m/n/10 
 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 05$\T1/ptm/m/n/10 (+20) ,
  []
 
 
-Overfull \hbox (8.06638pt too wide) detected at line 369
+Underfull \hbox (badness 10000) in paragraph at lines 526--526
+[]\T1/ptm/m/n/10 (+20) TABLE II: |Hyper-parameter grids searched by
+ []
+
+
+Overfull \hbox (8.06638pt too wide) detected at line 580
 [][][][] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 ;
  []
 
-<../figures/overlay_roc_curves.png, id=208, 494.3268pt x 422.0568pt>
+[4 <../figures/pca_scatter.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <../figures/ml_architecture.png>]
+<../figures/overlay_roc_curves.png, id=312, 494.3268pt x 422.0568pt>
 File: ../figures/overlay_roc_curves.png Graphic file (type png)
 <use ../figures/overlay_roc_curves.png>
 Package pdftex.def Info: ../figures/overlay_roc_curves.png  used on input line 
-419.
+638.
 (pdftex.def)             Requested size: 239.39923pt x 204.40105pt.
-<../figures/overlay_pr_curves.png, id=209, 494.3268pt x 422.0568pt>
+<../figures/overlay_pr_curves.png, id=313, 494.3268pt x 422.0568pt>
 File: ../figures/overlay_pr_curves.png Graphic file (type png)
 <use ../figures/overlay_pr_curves.png>
-Package pdftex.def Info: ../figures/overlay_pr_curves.png  used on input line 4
-27.
+Package pdftex.def Info: ../figures/overlay_pr_curves.png  used on input line 6
+46.
 (pdftex.def)             Requested size: 239.39923pt x 204.40105pt.
-<../figures/confusion_matrix_grid.png, id=211, 1426.6098pt x 310.761pt>
+<../figures/confusion_matrix_grid.png, id=315, 1426.6098pt x 310.761pt>
 File: ../figures/confusion_matrix_grid.png Graphic file (type png)
 <use ../figures/confusion_matrix_grid.png>
 Package pdftex.def Info: ../figures/confusion_matrix_grid.png  used on input li
-ne 440.
+ne 659.
 (pdftex.def)             Requested size: 490.19843pt x 106.78114pt.
-[3 <../figures/pca_scatter.png>]
-<../figures/feature_importance_xgboost.png, id=232, 566.5968pt x 349.7868pt>
+<../figures/feature_importance_xgboost.png, id=318, 566.5968pt x 349.7868pt>
 File: ../figures/feature_importance_xgboost.png Graphic file (type png)
 <use ../figures/feature_importance_xgboost.png>
 Package pdftex.def Info: ../figures/feature_importance_xgboost.png  used on inp
-ut line 458.
+ut line 677.
 (pdftex.def)             Requested size: 214.20154pt x 132.23184pt.
-<../figures/feature_importance_random_forest.png, id=233, 566.5968pt x 349.7868
+<../figures/feature_importance_random_forest.png, id=319, 566.5968pt x 349.7868
 pt>
 File: ../figures/feature_importance_random_forest.png Graphic file (type png)
 <use ../figures/feature_importance_random_forest.png>
 Package pdftex.def Info: ../figures/feature_importance_random_forest.png  used 
-on input line 465.
+on input line 684.
 (pdftex.def)             Requested size: 214.20154pt x 132.23184pt.
 
-Underfull \hbox (badness 3240) in paragraph at lines 520--528
+Underfull \hbox (badness 6316) in paragraph at lines 739--745
+[]\T1/ptm/m/n/10 (+20) Three sup-ple-men-tary stud-ies, each im-ple-mented in
+ []
+
+[6 <../figures/overlay_roc_curves.png> <../figures/overlay_pr_curves.png>]
+<../figures/feature_selection_comparison.png, id=337, 349.7868pt x 317.0244pt>
+File: ../figures/feature_selection_comparison.png Graphic file (type png)
+<use ../figures/feature_selection_comparison.png>
+Package pdftex.def Info: ../figures/feature_selection_comparison.png  used on i
+nput line 767.
+(pdftex.def)             Requested size: 214.20154pt x 194.13922pt.
+
+[7 <../figures/confusion_matrix_grid.png> <../figures/feature_importance_xgboos
+t.png> <../figures/feature_importance_random_forest.png> <../figures/feature_se
+lection_comparison.png>]
+<../figures/gmm_bic_aic.png, id=355, 494.3268pt x 277.035pt>
+File: ../figures/gmm_bic_aic.png Graphic file (type png)
+<use ../figures/gmm_bic_aic.png>
+Package pdftex.def Info: ../figures/gmm_bic_aic.png  used on input line 798.
+(pdftex.def)             Requested size: 214.20154pt x 120.04425pt.
+<../figures/gmm_pca_ellipses.png, id=356, 494.3268pt x 349.7868pt>
+File: ../figures/gmm_pca_ellipses.png Graphic file (type png)
+<use ../figures/gmm_pca_ellipses.png>
+Package pdftex.def Info: ../figures/gmm_pca_ellipses.png  used on input line 80
+9.
+(pdftex.def)             Requested size: 214.20154pt x 151.56892pt.
+<../figures/tsne_scatter.png, id=357, 494.3268pt x 349.7868pt>
+File: ../figures/tsne_scatter.png Graphic file (type png)
+<use ../figures/tsne_scatter.png>
+Package pdftex.def Info: ../figures/tsne_scatter.png  used on input line 819.
+(pdftex.def)             Requested size: 214.20154pt x 151.56892pt.
+<../figures/umap_scatter.png, id=358, 494.3268pt x 349.7868pt>
+File: ../figures/umap_scatter.png Graphic file (type png)
+<use ../figures/umap_scatter.png>
+Package pdftex.def Info: ../figures/umap_scatter.png  used on input line 831.
+(pdftex.def)             Requested size: 214.20154pt x 151.56892pt.
+<../figures/learning_curve_xgboost.png, id=361, 494.3268pt x 313.6518pt>
+File: ../figures/learning_curve_xgboost.png Graphic file (type png)
+<use ../figures/learning_curve_xgboost.png>
+Package pdftex.def Info: ../figures/learning_curve_xgboost.png  used on input l
+ine 853.
+(pdftex.def)             Requested size: 214.20154pt x 135.91096pt.
+ [8 <../figures/gmm_bic_aic.png> <../figures/gmm_pca_ellipses.png> <../figures/
+tsne_scatter.png> <../figures/umap_scatter.png>]
+Underfull \hbox (badness 3240) in paragraph at lines 926--936
 []\T1/ptm/m/n/10 (+20) Every re-ported num-ber is re-pro-ducible with a sin-
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 520--528
-\T1/ptm/m/n/10 (+20) gle \T1/pcr/m/n/10 RANDOM_SEED = 42 \T1/ptm/m/n/10 (+20) a
-nd a fixed pack-age ma-trix
+Underfull \hbox (badness 1715) in paragraph at lines 926--936
+\T1/ptm/m/n/10 (+20) tic com-po-nent --- splits, SMOTE-check, RF, XG-Boost,
  []
 
-[4 <../figures/overlay_roc_curves.png> <../figures/overlay_pr_curves.png>]
-Underfull \hbox (badness 1975) in paragraph at lines 577--586
-[]\T1/ptm/m/n/10 (+20) We re-leased a re-pro-ducible, course-grade tabular-ML
- []
-
-[5 <../figures/confusion_matrix_grid.png> <../figures/feature_importance_xgboos
-t.png> <../figures/feature_importance_random_forest.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 689--692
+[9 <../figures/learning_curve_xgboost.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1124
 []\T1/ptm/m/n/8 (+20) ECI Cen-tauri, ``As-tronet CNN v3 --- light-curve clas-si
 -fier,''
  []
@@ -786,24 +874,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
-
-] (main.aux)
+[10] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6C68E1935501B662622D0B54404F6B71;4698.
+(rerunfilecheck)             Checksum: 0AC0E9ECE7B5FF3A54AD7751B067D882;7140.
  ) 
 Here is how much of TeX's memory you used:
- 15759 strings out of 467866
- 255461 string characters out of 5417357
- 706409 words of memory out of 5000000
- 44049 multiletter control sequences out of 15000+600000
- 757879 words of font info for 366 fonts, out of 8000000 for 9000
+ 15981 strings out of 467866
+ 259617 string characters out of 5417357
+ 708894 words of memory out of 5000000
+ 44157 multiletter control sequences out of 15000+600000
+ 764425 words of font info for 419 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,1003b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1003b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmex10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/t
@@ -816,18 +902,23 @@ rio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C
 r10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmr6.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Usuario/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Usuario/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Usuario/A
-ppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Usuar
-io/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usu
-ario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/
-Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/User
-s/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 961312 bytes).
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Usuario/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Usuario/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Usua
+rio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
+Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw
+/courier/ucrb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/courier/ucrr8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts
+/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fo
+nts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 1651319 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 58153 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 521 PDF objects out of 1000 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
+ 61852 words of extra memory for PDF output out of 61914 (max. 10000000)
 
