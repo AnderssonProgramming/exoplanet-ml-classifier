@@ -32,6 +32,11 @@
   <a href="https://github.com/Maestria-en-Ciencia-de-datos-HWTNM/Machine_Learning_Intro">Machine Learning Intro</a>
 </p>
 
+<p align="center">
+  🎥 <b>Video Walkthrough:</b> <a href="https://youtu.be/EeGQ5s_lnq4">Watch our full project explanation on YouTube</a><br/>
+  <sub>Full defense of the pipeline, methodology and results — presented by Andersson Sánchez &amp; Cristian Pedraza.</sub>
+</p>
+
 ---
 
 ## 🎯 Table of Contents
